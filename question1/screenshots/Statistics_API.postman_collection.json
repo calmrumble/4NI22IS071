@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "a1b2c3d4-e5f6-g7h8-i9j0-k1l2m3n4o5p6",
+		"name": "Statistics API",
+		"description": "Collection for testing the Statistics Calculator API endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Calculate Average",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"numbers\": [10, 20, 30, 40, 50]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/calculate-average",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["calculate-average"]
+				}
+			}
+		},
+		{
+			"name": "Calculate Median",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"numbers\": [10, 20, 30, 40, 50]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/calculate-median",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["calculate-median"]
+				}
+			}
+		},
+		{
+			"name": "Calculate Mode",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"numbers\": [1, 2, 2, 3, 4, 4, 4, 5]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/calculate-mode",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["calculate-mode"]
+				}
+			}
+		},
+		{
+			"name": "Calculate Standard Deviation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"numbers\": [2, 4, 4, 4, 5, 5, 7, 9]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/calculate-stddev",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["calculate-stddev"]
+				}
+			}
+		},
+		{
+			"name": "Error - Empty Array",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"numbers\": []\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/calculate-average",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["calculate-average"]
+				}
+			}
+		},
+		{
+			"name": "Error - Invalid Input",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"numbers\": [1, \"2\", 3]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/calculate-average",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["calculate-average"]
+				}
+			}
+		}
+	]
+} 
